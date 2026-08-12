@@ -11,10 +11,26 @@
 <div class="container">
     <h1>> MORSE_TRANSMITTER_v1.0</h1>
     
-    <label for="input-text">ENTER TEXT:</label>
-    <textarea id="input-text" placeholder="Type here..."></textarea>
+    <div class="mode-header">
+        <span id="mode-indicator" class="mode-badge">MODE: TEXT ➔ MORSE</span>
+        <button id="btn-toggle-mode" class="btn-toggle">⇄ SWITCH DIRECTION</button>
+    </div>
 
-    <label style="margin-top: 15px;">MORSE OUTPUT:</label>
+    <label for="input-text" id="label-input">ENTER TEXT:</label>
+    <textarea id="input-text" placeholder="Type text here..."></textarea>
+
+    <div class="controls">
+        <div class="speed-control">
+            <label for="wpm-slider">SPEED: <span id="wpm-value">15</span> WPM</label>
+            <input type="range" id="wpm-slider" min="5" max="30" value="15">
+        </div>
+        <div class="button-group">
+            <button id="btn-play">▶ PLAY MORSE</button>
+            <button id="btn-stop" disabled>⏹ STOP</button>
+        </div>
+    </div>
+
+    <label style="margin-top: 15px;" id="label-output">MORSE OUTPUT:</label>
     <div id="output-morse" class="output-box">...</div>
 
     <div class="footer">PURPLEGUY LABS // AUDIO SYNTHESIZER READY</div>
